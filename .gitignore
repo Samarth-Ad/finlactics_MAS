@@ -1,0 +1,54 @@
+# 🔐 Environment variables
+.env
+.env.*
+!.env.example
+
+# 🐍 Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 📦 Virtual environments
+.venv/
+venv/
+env/
+
+# 📁 Build / distribution
+build/
+dist/
+*.egg-info/
+
+# 🧪 Test / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+
+# 📓 Jupyter notebooks
+.ipynb_checkpoints/
+
+# 🧾 Logs
+*.log
+
+# 🧠 IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🖥 OS files
+.DS_Store
+Thumbs.db
+
+# ⚡ UV-specific
+# uv.lock  # optional: ignore if you don't want to lock deps
+
+# 🧠 Python version file (optional)
+.python-version
+
+# 🚀 FastAPI / runtime artifacts
+*.db
+*.sqlite3
+
+# 🔥 Misc
+*.bak
+*.tmp
