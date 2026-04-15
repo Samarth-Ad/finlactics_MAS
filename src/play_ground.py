@@ -1,22 +1,19 @@
-from phi.agent import Agent
-from phi.model.groq import Groq
-from phi.tools.yfinance import YFinanceTools
-from phi.tools.duckduckgo import DuckDuckGo
-from phi.playground import Playground, serve_playground_app
+from phi.playground import Playground
 from dotenv import load_dotenv
-from Agents import finance_agent,web_agent,multi_agent
-import os
+
+from Agents.insights_agent import getInsightsAgent
+from Agents.news_agent import getNewsImpactAgent
+from Agents.multi_agent import getMultiAgent
+
 load_dotenv()
 
 
-
-
-def getPlayground()->Playground:
-    app = Playground(
+def getPlayground() -> Playground:
+    playground = Playground(
         agents=[
-            finance_agent.geFinanceAgent(),
-            web_agent.getWebSearchAgent(),
-            multi_agent.getMultiAgent()
+            getInsightsAgent(),
+            getNewsImpactAgent(),
+            getMultiAgent()
         ]
-    ).get_app()
-    return app
+    )
+    return playground.get_app()
